@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package org.xproce.labs ;
+
+message ComputerRequest{
+  string name = 1;
+  string caracterique = 2 ;
+  double price = 3 ;
+}
+
+message ComputerResponse{
+  int32 id = 1 ;
+  string name = 2;
+  string caracterique = 3 ;
+  double price = 4 ;
+}
+
+service ComputerService{
+  rpc addComputer(ComputerRequest) returns (ComputerResponse);
+}
